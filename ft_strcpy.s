@@ -7,4 +7,13 @@ _ft_strcpy:
     xor rdx, rdx
     
 copy:
-    
+    cmp BYTE [rsi + rcx], 0
+    jz  null
+
+    mov rbx, [rsi + rcx]
+    mov [rdi + rcx], rbx
+    inc rcx
+
+null:
+    mov rax, rdi
+    ret

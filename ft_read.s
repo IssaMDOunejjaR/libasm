@@ -4,9 +4,9 @@ section .text
 _ft_read:
     mov rax, 0x02000003
     syscall
-    jc return
+    jc error
     ret
 
-return:
+error:
     mov rax, -1
     ret

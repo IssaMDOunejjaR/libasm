@@ -6,15 +6,17 @@
 #    By: iounejja <iounejja@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/07 18:30:39 by iounejja          #+#    #+#              #
-#    Updated: 2020/03/09 16:14:04 by iounejja         ###   ########.fr        #
+#    Updated: 2020/03/12 12:37:07 by iounejja         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libasm.a
+NAME =	libasm.a
 SRCS =	ft_read.s \
 		ft_strcmp.s \
 		ft_write.s \
-		ft_strlen.s
+		ft_strlen.s \
+		ft_strcpy.s \
+		ft_strdup.s
 OBJS = $(SRCS:.s=.o)
 
 all: $(NAME)
