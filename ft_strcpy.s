@@ -3,17 +3,16 @@ section .text
 
 _ft_strcpy:
     xor rcx, rcx
-    xor rbx, rbx
-    xor rdx, rdx
-    
+
 copy:
-    cmp BYTE [rsi + rcx], 0
-    jz  null
-
-    mov rbx, [rsi + rcx]
-    mov [rdi + rcx], rbx
+    cmp [rsi + rcx], BYTE 0
+    je return
+    mov dl, BYTE [rsi + rcx]
+    mov [rdi + rcx], BYTE dl
     inc rcx
+    jmp copy
 
-null:
+return:
+    mov [rdi + rcx], BYTE 0
     mov rax, rdi
     ret

@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: iounejja <iounejja@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/03/07 18:30:39 by iounejja          #+#    #+#              #
-#    Updated: 2020/03/12 12:37:07 by iounejja         ###   ########.fr        #
+#    Created: 2020/10/17 11:04:40 by iounejja          #+#    #+#              #
+#    Updated: 2020/10/18 16:37:34 by iounejja         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	libasm.a
-SRCS =	ft_read.s \
-		ft_strcmp.s \
-		ft_write.s \
+NAME = libasm.a
+SRCS = 	ft_write.s \
+		ft_read.s \
 		ft_strlen.s \
-		ft_strcpy.s \
-		ft_strdup.s
+		ft_strcmp.s \
+		ft_strdup.s \
+		ft_strcpy.s
 OBJS = $(SRCS:.s=.o)
 
 all: $(NAME)
@@ -27,10 +27,10 @@ $(NAME): $(OBJS)
 %.o: %.s
 	nasm -f macho64 $< -o $@
 
-clean: 
-	rm -f *.o
+clean:
+	rm -rf *.o
 
 fclean: clean
-		rm -f $(NAME)
+		rm -rf $(NAME)
 
 re: fclean all

@@ -5,19 +5,12 @@ section .text
     extern _ft_strcpy
 
 _ft_strdup:
-    push rdi
     call _ft_strlen
-    inc rax
+    push rdi
     mov rdi, rax
     call _malloc
-    cmp rax, 0
-    jle error
     pop rdi
     mov rsi, rdi
     mov rdi, rax
     call _ft_strcpy
-    ret
-    
-error:
-    xor rax, rax
     ret

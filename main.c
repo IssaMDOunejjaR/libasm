@@ -5,42 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: iounejja <iounejja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/03/07 18:38:15 by iounejja          #+#    #+#             */
-/*   Updated: 2020/03/12 15:39:50 by iounejja         ###   ########.fr       */
+/*   Created: 2020/10/17 11:14:05 by iounejja          #+#    #+#             */
+/*   Updated: 2020/10/23 16:56:32 by iounejja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libasm.h"
+#include <errno.h>
 
-int		main()
+int main()
 {
-	//-- Read
-	// char *str;
-	
-	// read(1, &str, 10);
-	// ft_read(1, &str, 10);
-	// printf("%s\n", str);
+    char *buff;
+    char dest[20];
 
-	//-- Strcmp
-	// printf("%d\n", ft_strcmp("issam", "issam"));
-	// printf("%d\n", strcmp("issam", "issam"));
+    // ft_write
+    // printf("%zd\n", ft_write(1, "hello\n", 6));
+    // printf("%d\n", errno);
+    // printf("%zd\n", write(1, "hello\n", 6));
+    // printf("%d\n", errno);
 
-	//-- Strcpy
-	// char	*dest = strdup("hello");
-	// char	*src = strdup("world");
+    // ft_read
+    // printf("%zd\n", ft_read(1, &buff, 100));
+    // printf("%d\n", errno);
+    // printf("%zd\n", read(1, &buff, 100));
+    // printf("%d\n", errno);
 
-	// printf("%s\n", ft_strcpy(dest, src));
-	// printf("%s\n", strcpy(dest, src));
+    // ft_strlen
+    // printf("%zd\n", ft_strlen("065113"));
+    // printf("%zd\n", strlen("065113"));
 
-	//-- Strdup
-	// printf("%s\n", ft_strdup("issam"));
-	// printf("%s\n", strdup("ounejjar"));
+    // ft_strcmp
+    // printf("%d\n", ft_strcmp("Hello, World!", "Hello, World!"));
+    // printf("%d\n", strcmp("Hello, World!", "Hello, World!"));
 
-	//-- Strlen
-	// printf("%zu\n", ft_strlen("issam"));
-	// printf("%zu\n", strlen("issam"));
+    // ft_strcpy
+    // printf("%s\n", strcpy(dest, "Hello, World!"));
+    // printf("%s\n", ft_strcpy(dest, "Hello, World!"));
 
-	//-- Write
-	// ft_write(1, "issam\n", 6);
-	// write(1, "issam\n", 6);
+    // ft_strdup
+    printf("%s\n", ft_strdup("Hello, World!"));
+    printf("%s\n", strdup("Hello, World!"));
+
+    return (0);
 }
